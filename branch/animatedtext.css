@@ -1,0 +1,128 @@
+*{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: 'arial black';
+
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.3),transparent),url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.nav{
+    display: flex;/*flex for side by side*/
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.echoecho{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.name{padding-left:15px;
+font-family: arial;
+color: rgb(0, 0, 0);
+-webkit-text-stroke: 1px rgb(255, 0, 212);
+letter-spacing: 20x;}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 30px;
+    margin-top: 0;
+}
+nav ul li a{
+    color: tomato;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+    border: solid red;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(0, 0, 0);
+}
+nav ul li a:hover{
+border-radius: 20%;
+background-color: rgb(0, 0, 0);
+color: rgb(42, 241, 231);
+border: solid rgb(255, 0, 179);
+border-width: 5px;}
+
+.text{
+    color: white;
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 400px;
+}
+
+.text p{
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.text h1{
+    font-size: 150px;
+    text-align: center;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    background: url(images/fire.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{ background-position: 200px 0;}
+}
+
+.dz img{
+    width: 150px;
+    animation: dz 10s linear infinite;
+}
+
+.dz{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -120px;
+}
+
+@keyframes dz{
+    0%{transform: translateY(0vh);
+    opacity: 0;}
+
+    25%{opacity: 1;}
+
+     50%{ opacity: 1;}
+
+     75%{opacity: 1;}
+
+     100%{transform: translateY(50vh);
+            opacity: 0;}    
+}
+
+.dz img:nth-child(1){animation-delay: 8s;}
+.dz img:nth-child(2){animation-delay: 6s;}
+.dz img:nth-child(3){animation-delay:2s ;}
+.dz img:nth-child(4){animation-delay: 4s;}
